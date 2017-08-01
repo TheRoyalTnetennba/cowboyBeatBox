@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ultra', serif;
+  color: white;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background: #cb5429;
+  letter-spacing: 2px;
+  font-size: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar > h1 {
+  margin-left: 30px;
+}
+
+.social {
+  margin-right: 30px;
+  font-size: 55px;
+}
+
+.social > * {
+  cursor: pointer;
+}
+
+.social > *:hover, .social > *:active {
+  color:  #23485a;
+}
+
+.spike {
+  flex: 1;
+  align-self: center;
+  height: 75%;
+}
+
+.board {
+  width: auto;
+  margin-left: 13%;
+  margin-right: 13%;
+  flex-direction: column;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.board-row {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.controls {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.tile {
+  flex: 1;
+  border: 2px solid #23485a;
+  border-radius: 3px;
+  background-color: #23485a;
+  /*width: 50%;*/
+  padding-bottom: 3.5%;
+  margin: 2px;
+  cursor: pointer;
+}

@@ -44,11 +44,11 @@ In addition to the webpack entry file, there will be three scripts involved in t
 
 **Day 1**: Setup all necessary Node modules, including getting webpack up and running.  Create `webpack.config.js` as well as `package.json`.  Write a basic entry file and the bare bones of all 3 scripts outlined above.  Learn the basics of `Canvas HTML5`.
 
-**Day 2**: Prepare basic UI and styling.
+**Day 2**: Prepare basic UI and styling. Complete HTML skeleton with CSS stylings.
 
-**Day 3**: Build logic and visualizations for BeatBox portion.
+**Day 3**: Build logic and visualizations for BeatBox portion. Build tempo functionality and select sound clips.
 
-**Day 4**: Give Spike all the dance moves he needs to succeed.
+**Day 4**: Give Spike all the dance moves he needs to succeed. Draw sprites and flip through them with canvas.
 
 
 ### Bonus features

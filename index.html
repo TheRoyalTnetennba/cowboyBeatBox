@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="bundle.js"></script>
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Kadwa:700|Ultra" rel="stylesheet">
+    <script src="https://use.fontawesome.com/1cdb92af1e.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navbar">
+        <h1>CowboyBeatBox</h1>
+        <div class="social">
+          <i class="fa fa-github" aria-hidden="true"></i>
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+        </div>
+      </nav>
+      <canvas id="spikeAnimation"></canvas>
+      <div class="board">
+        <div class="board-row" id="0">
+          <div class="tile" id="0">
+          </div>
+          <div class="tile" id="1">
+          </div>
+          <div class="tile" id="2">
+          </div>
+          <div class="tile" id="3">
+          </div>
+          <div class="tile" id="4">
+          </div>
+          <div class="tile" id="5">
+          </div>
+          <div class="tile" id="6">
+          </div>
+          <div class="tile" id="7">
+          </div>
+        </div>
+        <div class="board-row" id="1">
+          <div class="tile" id="0">
+          </div>
+          <div class="tile" id="1">
+          </div>
+          <div class="tile" id="2">
+          </div>
+          <div class="tile" id="3">
+          </div>
+          <div class="tile" id="4">
+          </div>
+          <div class="tile" id="5">
+          </div>
+          <div class="tile" id="6">
+          </div>
+          <div class="tile" id="7">
+          </div>
+        </div>
+        <div class="board-row" id="2">
+          <div class="tile" id="0">
+          </div>
+          <div class="tile" id="1">
+          </div>
+          <div class="tile" id="2">
+          </div>
+          <div class="tile" id="3">
+          </div>
+          <div class="tile" id="4">
+          </div>
+          <div class="tile" id="5">
+          </div>
+          <div class="tile" id="6">
+          </div>
+          <div class="tile" id="7">
+          </div>
+        </div>
+        <div class="board-row" id="3">
+          <div class="tile" id="0">
+          </div>
+          <div class="tile" id="1">
+          </div>
+          <div class="tile" id="2">
+          </div>
+          <div class="tile" id="3">
+          </div>
+          <div class="tile" id="4">
+          </div>
+          <div class="tile" id="5">
+          </div>
+          <div class="tile" id="6">
+          </div>
+          <div class="tile" id="7">
+          </div>
+        </div>
+        <div class="board-row" id="4">
+          <div class="tile" id="0">
+          </div>
+          <div class="tile" id="1">
+          </div>
+          <div class="tile" id="2">
+          </div>
+          <div class="tile" id="3">
+          </div>
+          <div class="tile" id="4">
+          </div>
+          <div class="tile" id="5">
+          </div>
+          <div class="tile" id="6">
+          </div>
+          <div class="tile" id="7">
+          </div>
+        </div>
+        <div class="board-row" id="5">
+          <div class="tile" id="0">
+          </div>
+          <div class="tile" id="1">
+          </div>
+          <div class="tile" id="2">
+          </div>
+          <div class="tile" id="3">
+          </div>
+          <div class="tile" id="4">
+          </div>
+          <div class="tile" id="5">
+          </div>
+          <div class="tile" id="6">
+          </div>
+          <div class="tile" id="7">
+          </div>
+        </div>
+        <div class="board-row" id="6">
+          <div class="tile" id="0">
+          </div>
+          <div class="tile" id="1">
+          </div>
+          <div class="tile" id="2">
+          </div>
+          <div class="tile" id="3">
+          </div>
+          <div class="tile" id="4">
+          </div>
+          <div class="tile" id="5">
+          </div>
+          <div class="tile" id="6">
+          </div>
+          <div class="tile" id="7">
+          </div>
+        </div>
+        <div class="board-row" id="7">
+          <div class="tile" id="0">
+          </div>
+          <div class="tile" id="1">
+          </div>
+          <div class="tile" id="2">
+          </div>
+          <div class="tile" id="3">
+          </div>
+          <div class="tile" id="4">
+          </div>
+          <div class="tile" id="5">
+          </div>
+          <div class="tile" id="6">
+          </div>
+          <div class="tile" id="7">
+          </div>
+        </div>
+        <div class="controls">
+          <div class="tempo">
+            <input type="range" id="tempo" min="1" max="100" value="10" />
+          </div>
+          <div class="play">
+            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+            <i class="fa fa-pause-circle-o" aria-hidden="true"></i>
+          </div>
+          <div class="reset">
+            <i class="fa fa-undo" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
