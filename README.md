@@ -28,7 +28,7 @@ This app will consist of a single screen with a grid of buttons, a tempo bar,  b
 
 This project will be implemented with the following technologies:
 
-- Vanilla JavaScript and `jquery` for overall structure and game logic,
+- Vanilla JavaScript (ES6) for overall structure and game logic,
 - `HTML5 Canvas` for DOM manipulation and rendering,
 - Webpack to bundle and serve up the various scripts.
 
