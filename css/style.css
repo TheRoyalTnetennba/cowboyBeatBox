@@ -86,6 +86,7 @@ body {
 
 .controls > * > * {
   cursor: pointer;
+  font-size: 60px;
 }
 
 .tile {
