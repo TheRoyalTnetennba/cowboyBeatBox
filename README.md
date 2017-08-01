@@ -56,3 +56,4 @@ In addition to the webpack entry file, there will be three scripts involved in t
 Some of the possible add-on features include:
 
 - [ ] Using Web Speech API to sing/rap user input to a given beat.
+- [ ] Adding the option to select from different Cowboy Bebop characters
