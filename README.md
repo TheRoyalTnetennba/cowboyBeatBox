@@ -31,6 +31,8 @@ This project will be implemented with the following technologies:
 - Vanilla JavaScript (ES6) for overall structure and game logic,
 - `HTML5 Canvas` for DOM manipulation and rendering,
 - Webpack to bundle and serve up the various scripts.
+- Audacity for sound samples
+- Piskel for sprite images0
 
 In addition to the webpack entry file, there will be three scripts involved in this project:
 
