@@ -10,7 +10,6 @@ class Board {
     this.reset = document.getElementById('reset');
     this.playColumn = 0;
     this.init();
-    this.genSounds();
   }
 
   init() {
@@ -30,19 +29,25 @@ class Board {
     this.mainInterval = setInterval(this.playTiles.bind(this), this.rate());
   }
 
-  genSounds() {
-    this.sounds[0] = new Audio('https://res.cloudinary.com/dy4gcvjff/video/upload/ac_mp3/v1501800875/looperman-l-2283018-0109961-amusah-percussive-trap-synth-f-minor-110-bpm_bbovrx.wav');
-    this.sounds[1] = new Audio('https://res.cloudinary.com/dy4gcvjff/video/upload/ac_mp3/v1501800875/looperman-l-1871485-0109347-grwi2016-no-role-modelz-bass_uon3gk.wav');
-    this.sounds[2] = new Audio('https://res.cloudinary.com/dy4gcvjff/video/upload/ac_mp3/v1501800875/looperman-l-2201803-0111523-sxker-happy-marimba-chords_sejpax.wav');
-    this.sounds[3] = new Audio('https://res.cloudinary.com/dy4gcvjff/video/upload/ac_mp3/v1501800875/looperman-l-1655182-0108938-az96lol-mexikodro-rim_eov0bf.wav');
-    this.sounds[4] = new Audio('https://res.cloudinary.com/dy4gcvjff/video/upload/ac_mp3/v1501800875/looperman-l-0173158-0111436-callmeking-sifu-snare-130bpm_gjkxwd.wav');
-    this.sounds[5] = new Audio('https://res.cloudinary.com/dy4gcvjff/video/upload/ac_mp3/v1501800875/looperman-l-1929922-0111261-alabafruit-bones-electronic-melodic-bones-percussion-120-bpm_xlnusi.wav');
-    this.sounds[6] = new Audio('https://res.cloudinary.com/dy4gcvjff/video/upload/ac_mp3/v1501800876/looperman-l-1099214-0110961-eluterius-a-bag-full-of-spiders_qy0fn6.wav');
-    this.sounds[7] = new Audio('https://res.cloudinary.com/dy4gcvjff/video/upload/ac_mp3/v1501800876/looperman-l-1093714-0110444-slicexbeats-reversing-cymbal-hits_piidgr.wav');
-  }
-
   whichSound(row, col) {
-    return this.sounds[row];
+    switch (row) {
+      case 0:
+        return new Audio('https://res.cloudinary.com/dy4gcvjff/video/upload/v1501803147/looperman-l-0173158-0111436-callmeking-sifu-snare-130bpm_tf5dyb.mp3');
+      case 1:
+        return new Audio('https://res.cloudinary.com/dy4gcvjff/video/upload/v1501803147/looperman-l-1099214-0110961-eluterius-a-bag-full-of-spiders_adahfs.mp3');
+      case 2:
+        return new Audio('https://res.cloudinary.com/dy4gcvjff/video/upload/v1501803147/looperman-l-1093714-0110444-slicexbeats-reversing-cymbal-hits_pfwpmb.mp3');
+      case 3:
+        return new Audio('https://res.cloudinary.com/dy4gcvjff/video/upload/v1501803147/looperman-l-1871485-0109347-grwi2016-no-role-modelz-bass_udpun0.mp3');
+      case 4:
+        return new Audio('https://res.cloudinary.com/dy4gcvjff/video/upload/v1501803147/looperman-l-0173158-0111060-callmeking-creepin-snare-clap-132bpm_ynhge5.mp3');
+      case 5:
+        return new Audio('https://res.cloudinary.com/dy4gcvjff/video/upload/v1501803147/looperman-l-2201803-0111523-sxker-happy-marimba-chords_ftdzty.mp3');
+      case 6:
+        return new Audio('https://res.cloudinary.com/dy4gcvjff/video/upload/v1501803147/looperman-l-1655182-0108938-az96lol-mexikodro-rim_glncnm.mp3');
+      case 7:
+        return new Audio('https://res.cloudinary.com/dy4gcvjff/video/upload/v1501803148/looperman-l-1929922-0111261-alabafruit-bones-electronic-melodic-bones-percussion-120-bpm_rucmdn.mp3');
+    }
   }
 
   toggleSelect(e) {
