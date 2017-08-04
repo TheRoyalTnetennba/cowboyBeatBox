@@ -109,6 +109,9 @@ body {
   box-shadow: 0 0 7px #FF0000, 0 0 9px #0000FF;
 }
 
+.dance-floor {
+  flex: 1;
+}
 
 
 
