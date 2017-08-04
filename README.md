@@ -21,7 +21,7 @@ Users are able to:
 
 This app consists of a single screen with a grid of buttons, a tempo bar,  basic controls, and nav links to the Github, my LinkedIn. Game controls include Start, Pause, and Reset buttons as well as a slider to control the tempo.
 
-![screenshot](docs/Screenshot from 2017-08-04 11-30-05.png)
+![screenshot](docs/screenshot.png)
 
 ### Architecture and Technologies
 
