@@ -1,123 +1,42 @@
 class Spike {
   constructor() {
-    this.spikeIMG = new Image();
-    this.spikeIMG.src = './images/paceholder.png'
+    this.sprite = new Image();
+    this.sprite.src = 'http://res.cloudinary.com/dy4gcvjff/image/upload/v1501818042/SpikeDance_dcoubx.png';
+    this.loadImage = this.loadImage.bind(this);
+    this.animate = this.animate.bind(this);
+    this.canvas = document.getElementById('spikeAnimation');
+    this.context = this.canvas.getContext('2d');
+    this.shift = 0;
+    this.width = 250;
+    this.height = 270;
+    this.totalFrames = 14;
+    this.currentFrame = 0;
+    this.init();
+    this.frameRate = 0;
+  }
+
+  init() {
+    this.sprite.addEventListener('load', this.loadImage, false);
+  }
+
+  loadImage(e) {
+    this.animate();
+  }
+
+  setFrameRate(rate) {
+
+  }
+
+  animate() {
+    this.context.clearRect(0, 0, this.width, this.height);
+    this.context.drawImage(this.sprite, this.shift, 0, this.width, this.height, 0, 0, this.width, this.height);
+    this.shift += this.width;
+    if (this.currentFrame === this.totalFrames) {
+      this.shift = 0;
+      this.currentFrame = 0;
+    }
+    this.currentFrame += 1;
   }
 }
 
-
-// (function() {
-//
-//     var lastTime = 0;
-//     var vendors = ['ms', 'moz', 'webkit', 'o'];
-//     for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-//         window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-//         window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame']
-//                                    || window[vendors[x]+'CancelRequestAnimationFrame'];
-//     }
-//
-//     if (!window.requestAnimationFrame)
-//         window.requestAnimationFrame = function(callback, element) {
-//             var currTime = new Date().getTime();
-//             var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-//             var id = window.setTimeout(function() { callback(currTime + timeToCall); },
-//               timeToCall);
-//             lastTime = currTime + timeToCall;
-//             return id;
-//         };
-//
-//     if (!window.cancelAnimationFrame)
-//         window.cancelAnimationFrame = function(id) {
-//             clearTimeout(id);
-//         };
-// }());
-//
-// (function () {
-//
-// 	var coin,
-// 		coinImage,
-// 		canvas;
-//
-// 	function gameLoop () {
-//
-// 	  window.requestAnimationFrame(gameLoop);
-//
-// 	  coin.update();
-// 	  coin.render();
-// 	}
-//
-// 	function sprite (options) {
-//
-// 		var that = {},
-// 			frameIndex = 0,
-// 			tickCount = 0,
-// 			ticksPerFrame = options.ticksPerFrame || 0,
-// 			numberOfFrames = options.numberOfFrames || 1;
-//
-// 		that.context = options.context;
-// 		that.width = options.width;
-// 		that.height = options.height;
-// 		that.image = options.image;
-//
-// 		that.update = function () {
-//
-//             tickCount += 1;
-//
-//             if (tickCount > ticksPerFrame) {
-//
-// 				tickCount = 0;
-//
-//                 // If the current frame index is in range
-//                 if (frameIndex < numberOfFrames - 1) {
-//                     // Go to the next frame
-//                     frameIndex += 1;
-//                 } else {
-//                     frameIndex = 0;
-//                 }
-//             }
-//         };
-//
-// 		that.render = function () {
-//
-// 		  // Clear the canvas
-// 		  that.context.clearRect(0, 0, that.width, that.height);
-//
-// 		  // Draw the animation
-// 		  that.context.drawImage(
-// 		    that.image,
-// 		    frameIndex * that.width / numberOfFrames,
-// 		    0,
-// 		    that.width / numberOfFrames,
-// 		    that.height,
-// 		    0,
-// 		    0,
-// 		    that.width / numberOfFrames,
-// 		    that.height);
-// 		};
-//
-// 		return that;
-// 	}
-//
-// 	// Get canvas
-// 	canvas = document.getElementById("coinAnimation");
-// 	canvas.width = 100;
-// 	canvas.height = 100;
-//
-// 	// Create sprite sheet
-// 	coinImage = new Image();
-//
-// 	// Create sprite
-// 	coin = sprite({
-// 		context: canvas.getContext("2d"),
-// 		width: 1000,
-// 		height: 100,
-// 		image: coinImage,
-// 		numberOfFrames: 10,
-// 		ticksPerFrame: 4
-// 	});
-//
-// 	// Load sprite sheet
-// 	coinImage.addEventListener("load", gameLoop);
-// 	coinImage.src = "images/coin-sprite-animation.png";
-//
-// } ());
+export default Spike;

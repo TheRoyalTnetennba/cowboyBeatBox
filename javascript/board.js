@@ -1,4 +1,4 @@
-
+import Spike from './spike';
 
 class Board {
   constructor() {
@@ -10,6 +10,7 @@ class Board {
     this.reset = document.getElementById('reset');
     this.playColumn = 0;
     this.init();
+    this.spike = new Spike();
   }
 
   init() {
@@ -98,6 +99,7 @@ class Board {
 
   playTiles() {
     if (this.pause.getAttribute('data')) {
+      this.spike.animate();
       const prevColumn = this.playColumn === 0 ? 7 : this.playColumn - 1;
       for (let row = 0; row < 8; row += 1) {
         this.selection[row][prevColumn].classList.remove('tile-shadow');
