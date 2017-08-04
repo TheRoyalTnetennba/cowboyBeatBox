@@ -111,6 +111,7 @@ body {
 
 .dance-floor {
   flex: 1;
+  align-self: center;
 }
 
 
