@@ -1,7 +1,7 @@
 class Spike {
   constructor() {
     this.sprite = new Image();
-    this.sprite.src = 'http://res.cloudinary.com/dy4gcvjff/image/upload/v1501818042/SpikeDance_dcoubx.png';
+    this.sprite.src = 'https://res.cloudinary.com/dy4gcvjff/image/upload/v1501818042/SpikeDance_dcoubx.png';
     this.loadImage = this.loadImage.bind(this);
     this.animate = this.animate.bind(this);
     this.canvas = document.getElementById('spikeAnimation');
